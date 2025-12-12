@@ -17,7 +17,7 @@ r2 = Review Music "Sempiternal"
       (Description "Sean" "2025-11-02" "Bring Me The Horizon")
       (Rating 9.5 10)
       (Body "A metalcore album that dives into the experiences of its lead singer."
-            ["Production", "Vocals", "Story"]
+            ["Production","Vocals","Story"]
             ["Lyrics in some parts could be better"])
 
 r3 :: Review
@@ -25,30 +25,26 @@ r3 = Review Movie "Interstellar"
       (Description "Alex" "2024-05-20" "Christopher Nolan")
       (Rating 9.7 10)
       (Body "A sprawling space epic with emotional core."
-            ["Scope", "Score", "Visuals"]
+            ["Scope","Score","Visuals"]
             ["Pacing issues"])
 
--- example program 1: add two reviews, print all, stats
+-- Program 1: add + print
 prog1 :: Program
 prog1 = BeginEnd
   [ Add r1
   , Add r2
   , PrintAll
-  , Stats AverageRating
   ]
 
--- example program 2: add, update rating, print title and type, stats highest
+-- Program 2: update + print
 prog2 :: Program
 prog2 = BeginEnd
   [ Add r3
-  , PrintAll
   , UpdateRating "Interstellar" 9.9
   , PrintByTitle "Interstellar"
-  , PrintByType Movie
-  , Stats HighestRated
   ]
 
--- example program 3: edit and delete
+-- Program 3: edit + delete + print
 r1Edited :: Review
 r1Edited = Review Movie "Inception"
             (Description "Sean" "2025-11-01" "Christopher Nolan")
@@ -62,20 +58,17 @@ prog3 = BeginEnd
   [ Add r1
   , Add r2
   , Edit "Inception" r1Edited
-  , PrintByTitle "Inception"
   , Delete "Sempiternal"
   , PrintAll
-  , Stats CountByType
   ]
 
--- example program 4: filter and reviewer frequency
+-- Program 4: filter reviewer
 prog4 :: Program
 prog4 = BeginEnd
   [ Add r1
   , Add r2
   , Add r3
   , FilterByReviewer "Sean"
-  , Stats ReviewerFrequency
   ]
 
 main :: IO ()
