@@ -6,7 +6,7 @@ import Semantics
 -- Example reviews
 r1 :: Review
 r1 = Review Movie "Inception"
-      (Description "Sean" "2025-11-01" "Christopher Nolan")
+      (Description "Sean" "11/01/2025" "Christopher Nolan")
       (Rating 9 10)
       (Body "A mind-bending sci-fi thriller."
             ["Visuals", "Soundtrack", "Concept"]
@@ -14,7 +14,7 @@ r1 = Review Movie "Inception"
 
 r2 :: Review
 r2 = Review Music "Sempiternal"
-      (Description "Sean" "2025-11-02" "Bring Me The Horizon")
+      (Description "Sean" "11/02/2025" "Bring Me The Horizon")
       (Rating 9.5 10)
       (Body "A metalcore album that dives into the experiences of its lead singer."
             ["Production","Vocals","Story"]
@@ -22,7 +22,7 @@ r2 = Review Music "Sempiternal"
 
 r3 :: Review
 r3 = Review Movie "Interstellar"
-      (Description "Alex" "2024-05-20" "Christopher Nolan")
+      (Description "Alex" "12/11/2025" "Christopher Nolan")
       (Rating 9.7 10)
       (Body "A sprawling space epic with emotional core."
             ["Scope","Score","Visuals"]
@@ -47,7 +47,7 @@ prog2 = BeginEnd
 -- Program 3: edit + delete + print
 r1Edited :: Review
 r1Edited = Review Movie "Inception"
-            (Description "Sean" "2025-11-01" "Christopher Nolan")
+            (Description "Sean" "12/11/2025" "Christopher Nolan")
             (Rating 9.2 10)
             (Body "A mind-bending sci-fi thriller (revisited)."
                   ["Visuals","Soundtrack","Concept"]

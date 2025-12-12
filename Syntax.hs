@@ -1,17 +1,17 @@
 module Syntax where
 
-{-  -- Review Language (simplified)
--- Context-Free Grammar
+{-  -- Review Language
+-- Context Free Grammar
 <program>       -> begin <commands> end
 <commands>      -> [<command>]
-<command>       -> add <review>
-                | edit <title> with <review>
-                | delete <title>
-                | print all
-                | print type <itemtype>
-                | print title <title>
-                | filter reviewer <string>
-                | update rating <title> <float>
+<command>       -> add <review>                   --adds a new review
+                | edit <title> with <review>      --looks for review by title and then replaces it with new review
+                | delete <title>                  --deletes a review
+                | print all                       --prints all reviews
+                | print type <itemtype>           --prints reviw by type
+                | print title <title>             --prints review by title
+                | filter reviewer <string>        --filters reviews by the reviewer
+                | update rating <title> <float>   --updates numerical rating by title
 
 <review>        -> review <itemtype> ":" <title> "{" <description> <rating> <body> "}"
 <itemtype>      -> movie | music | tv | book
